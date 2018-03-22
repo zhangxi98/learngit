@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jsyh.onlineshopping" >
+    <!--访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--SD卡读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />        <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />   <!-- 自动聚焦权限 -->
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--【必选】用以设置前台是否显示通知-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- alipay -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.jsyh.onlineshopping.ShopApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.me.LoginActivity" >
+        </activity>
+
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.Guide"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.me.MeAccountActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.me.MoreActicity" />
+        <activity android:name=".activity.me.RegisterActivity" />
+        <activity android:name=".activity.me.ForgetActivity"/>
+        <activity android:name=".activity.me.ChangePasswordActivity"/>
+        <activity android:name=".activity.me.NicknameActivity"/>
+        <activity android:name=".activity.me.SexChangeActivity"/>
+        <activity android:name=".activity.me.MessageActivity"/>
+        <activity android:name=".activity.me.FeedbackActivity"/>
+        <activity android:name=".activity.me.AddressListActivity"/>
+        <activity android:name=".activity.me.NewAddressActivity"/>
+        <activity android:name=".activity.me.MyOrderActivity"/>
+        <activity android:name=".activity.me.LookOrderActivity"/>
+        <activity android:name=".activity.me.CreateOrderActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged"/>
+        <activity android:name=".activity.me.SelectAreaActivity"/>
+        <activity android:name=".activity.me.DistributionActivity"/>
+        <activity android:name=".activity.me.TypeOrderActivity"/>
+        <activity android:name=".activity.me.EnvelopeActivity"/>
+        <activity android:name=".activity.me.AboutActivity"/>
+        <activity android:name=".activity.me.PayActivity"/>
+        <activity android:name=".activity.me.RechargeActivity"/>
+        <activity android:name=".activity.me.MeBounsActivity"/>
+        <activity
+            android:name=".activity.GoodsFilterActivity"
+            android:label="@string/title_activity_goods_filter" >
+        </activity>
+        <activity android:name="com.jsyh.onlineshopping.activity.DetatileActivity" />
+        <activity android:name=".activity.ShoppingCartActivity" />
+        <activity android:name=".activity.GoodsCollectActivity" />
+        <!-- 隐藏键盘 --><!-- 全屏 -->
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name="com.jsyh.onlineshopping.qrzxing.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity android:name=".activity.GoodsInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 友盟AppKey， 需要替换成你自己的 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="561effc0e0f55a5f3c004168" >
+        </meta-data>
+        <!-- *************************    分享相关的注册 START **************************** -->
+        <!-- 分享内容编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+        <!-- 腾讯SSO授权的Activity注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+         <!--*************************    分享相关的注册 END ****************************-->
+
+         <!--*************************    推送    ****************************-->
+         <!--监听通知点击或者忽略处理的广播-->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:exported="false"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.jsyh.onlineshopping.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:label="PushService"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.jsyh.onlineshopping.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.jsyh.onlineshopping.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:process=":push"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action"/>
+            </intent-filter>
+        </service>
+
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+
+        <!-- V2.5.0添加的Service，用于本地通知 -->
+        <!-- 如果不使用本地通知，可以注释掉本地通知服务的配置 -->
+        <service android:name="com.umeng.message.local.UmengLocalNotificationService"
+            android:exported="false" />
+
+        <!-- 使用完全自定义消息来开启应用的服务进程的示例服务配置 -->
+        <!-- 不是必需的服务，可以根据开发者的需求进行设置 -->
+        <service android:name="com.jsyh.onlineshopping.service.NotificationService" />
+
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="d0664aa3a14ccaac474bb77c141f8aa3" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" >
+        </meta-data>
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+    </application>
+</manifest>

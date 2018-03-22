@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/center_bg"
+    android:orientation="vertical">
+
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_toLeftOf="@+id/rlQR"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/category_circular_shap"
+                    android:drawableLeft="@mipmap/search_icon"
+                    android:focusable="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlQR"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/ivQR"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_qr_code" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    <!--</android.support.v7.widget.Toolbar>-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:scaleType="centerInside"
+        android:src="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/mainContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/lvOneLevel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:choiceMode="singleChoice"
+            android:divider="@drawable/line"
+            android:background="@color/category_one_item_layout_color"
+            android:dividerHeight="1px"
+            android:scrollbars="none" />
+
+        <FrameLayout
+            android:id="@+id/contents"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_weight="5">
+
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ViewStub
+        android:id="@+id/vsNetworkError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/empty_network_error"/>
+
+</LinearLayout>

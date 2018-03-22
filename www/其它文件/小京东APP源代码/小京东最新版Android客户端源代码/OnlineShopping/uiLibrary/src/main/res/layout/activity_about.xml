@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include
+        android:id="@+id/inc"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_below="@+id/inc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#e9e9e9"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:background="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ishop"
+            android:textSize="18dp"
+            android:textColor="@color/bottom_bg"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="京尚易和（北京）科技有限公司\n版权所有(001 001 001)"
+        android:textSize="18dp"
+        android:textColor="@color/bottom_bg"/>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+1.导入根目录中的2017xjd.sql到你的数据库
+
+2.修改data/config.php、mobile/supplier/data/config.php里的数据库连接语句
+
+3.网站后台   http://你的域名/admin/            admin 123456
+
+   微信后台   http://你的域名/mobile/admin/      admin 123456
+
+   商家后台   http://你的域名/supplier/  
+
+   商家后台   http://你的域名/mobile/supplier/ 

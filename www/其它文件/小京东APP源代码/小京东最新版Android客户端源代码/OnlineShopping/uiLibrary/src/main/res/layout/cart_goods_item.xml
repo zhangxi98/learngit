@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:focusable="false"
+    android:background="@drawable/goods_recycler_item_selector"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#d9d9d9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/select_goods"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@null"
+            android:drawableRight="@drawable/select_cart_goods"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:text="@null" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp">
+            <!--
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/holo_red_dark"
+                                android:gravity="center"
+                                android:text="满减"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:maxLines="1"
+                                android:text="满198元即可享受优惠" />
+
+                        </TableRow>-->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6">
+
+                <ImageView
+                    android:id="@+id/goods_image"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/none_login_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/goods_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:maxLines="2"
+                        android:text="今年的iPhone 7好便宜啊，好解释，用料好重注啊啊是垃圾打开离开家老款连上"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/goods_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="￥128"
+                        android:textSize="16sp" />
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.7"
+                        android:gravity="center_vertical">
+
+                        <ImageButton
+                            android:id="@+id/number_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/goods_num_sub" />
+
+                        <EditText
+                            android:id="@+id/goods_number"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textSize="16sp" />
+
+                        <ImageButton
+                            android:id="@+id/number_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@mipmap/goods_num_add" />
+                    </TableRow>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="小计：￥"
+                    android:textColor="#d90000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/goods_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="128"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="16sp" />
+
+            </TableRow>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/bottom_bg"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rbHome"
+                        style="@style/footbar"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/meau_task_icon"
+                        android:paddingTop="8dp"
+                        android:text="@string/string_Home" />
+
+                    <RadioButton
+                        android:id="@+id/rbCategory"
+                        style="@style/footbar"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/meau_contact_icon"
+                        android:paddingTop="8dp"
+                        android:text="@string/string_category" />
+
+                    <RadioButton
+                        android:id="@+id/rbShoppingCart"
+                        style="@style/footbar"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/meau_message_icon"
+                        android:paddingTop="8dp"
+                        android:text="@string/string_shoppingCart" />
+
+                    <RadioButton
+                        android:id="@+id/rbMe"
+                        style="@style/footbar"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/meau_me_icon"
+                        android:paddingTop="8dp"
+                        android:text="@string/string_Me" />
+                </RadioGroup>
+            <LinearLayout
+                android:id="@+id/fragmentRoot"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/radioGroup"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+

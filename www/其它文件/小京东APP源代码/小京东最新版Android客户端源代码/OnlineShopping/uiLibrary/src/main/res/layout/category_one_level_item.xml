@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <TextView
+        android:id="@+id/tvOneLevelName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/category_one_item_selector"
+        android:background="@drawable/category_one_level_item_selector"
+        android:gravity="center"
+        android:text="afdsfsdf"/>
+    <ImageView
+        android:id="@+id/ivRightLine"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/line_red"/>
+</RelativeLayout>

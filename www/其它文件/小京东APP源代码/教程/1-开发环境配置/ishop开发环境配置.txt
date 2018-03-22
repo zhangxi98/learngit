@@ -1,0 +1,55 @@
+1.下载安装JDK
+	a.这里选择oracle 官方的jdk，我们选择安装jdk1.7版本
+	
+	b. 查看电脑配置信息。这里的电脑是64位的，所以我们选择window x64 的下载
+		如果您的电脑配置 显示32位，那么选中window x86的即可。
+		
+	c.点击下载即可，保存到相应的目录。我这里已经提前下载好了。就不演示下载过程了。
+	
+	d.选中安装路径。安装路径不是固定的，按照您自己的意愿即可。
+		我这里安装在了 E:\dev\jdk\ 目录下。等待安装。。。。。
+	
+	e.配置jdk 环境变量。
+		1.我的电脑->属性->高级系统设置->高级->环境变量.
+		
+		2.增加环境变量。选中你刚才安装的目录位置，E:\dev\jdk\
+		3.增加到Path ，%JAVA_HOME%\bin 
+		4.测试是否安装成功 。win键 + R -> cmd -> 输入javac ,如果没有提示'无法识别的命令....'
+			表示安装成功。如果出现了，检查jdk安装路径。
+		
+	
+	
+2.下载android开发工具。android studio  
+		1.下载安装android studio。到谷歌官网下载。 
+			下载地址: http://developer.android.com/intl/zh-cn/sdk/index.html
+			由于在国内一般用户是服务打开google网址，也无法下载所以我们选择国内的镜像网站下载
+		
+		2.国内镜像网址 http://www.androiddevtools.cn/ 找到android studio 下载列表。
+			选择当前最新的正式版本即可，不要用preview版本，因为不稳定。
+		
+		3.解压下载下来的文件.我这里已经解压完毕了。
+			找到你解压的文件夹，我解压到了 E:\devtools\android-studio\bin ,双击打开 'studio64.exe' 
+			，如果你的是 32位的，打开 'studio.exe'.
+			
+		4.gradle配置，studio第一运行的时候回去检查更新，还是因为无法连接网址的原因，我们需要需改
+			gradle的配置，找的你的studio 解压路径下的 bin->idea.properties 文件打开。
+			在文件的末尾增加 disable.android.first.run=true
+			
+		5.如果出现刚才的提示点击cancle 即可
+		
+		6.配置sdk,confige -> project defaults-> android sdk location。
+			这个是配置你的sdk 本的位置。我的保存在了 E:\dev\androidsdk
+		
+		7. 配置sdk manager ,配置代理服务，国外无法下载。
+			tools->options 
+		
+		8.这里我们的android studio 安装完毕
+		
+		9. 建立一个工程测试一下。gradle构建时间会就一些。 到此我们的配置环境已经ok。
+		
+		
+		开始你的android 开发快乐之旅吧！！！
+		
+			
+		
+		
